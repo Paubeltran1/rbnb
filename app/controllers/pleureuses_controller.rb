@@ -9,13 +9,16 @@ class PleureusesController < ApplicationController
 
   def edit
     @pleureuse = Pleureuse.find(params[:id])
-    @pleureuse.save
-
   end
 
   def update
     @pleureuse = Pleureuse.find(params[:id])
-    @pleureuse.update(params[:pleureuse])
+    @pleureuse.update(pleureuse_params)
+      if @pleureuse.save
+    redirect_to pleureuse_path(@pleureuse)
+    else
+    render "edit"
+    end
   end
 
   def new
