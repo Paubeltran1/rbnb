@@ -1,0 +1,23 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(7, 14, 18, 0.59) 100%, rgba(0,36,61,0.6) 100%), url('https://unsplash.com/photos/T5lmpSYxnSU'); background-position: center;">
+  <div class="banner-content">
+    <h1>Trouvez le bon pleureuse pour vos funérailles</h1>
+    <p>Le meilleur pleureuse pour toutes sortes d'enterrements ou d'événements.</p>
+    <div class="row">
+      <div class="col-xs-1"></div>
+
+      <div class="col-xs-2">
+        <%= submit_tag 'Search',
+          class: "btn btn-primary"
+        %>
+      </div>
+      <div class="col-xs-1"></div>
+    <% end %>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h4 id="v_list">Choisissez un pleureuse à louer:</h4>
+  <div class="row">
+  <%= render 'shared/card' %>
+  </div>
+</div>
