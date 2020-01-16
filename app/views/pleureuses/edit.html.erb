@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class ="col-sm-4 col-sm-offset-4">
+
+      <h2>Ajouter une pleureuse</h2>
+
+      <%= simple_form_for @pleureuse do |f| %>
+        <div class="form-inputs">
+          <%= f.input :pseudo%>
+          <%= f.input :gender, collection: Pleureuse::GENDER, as: :radio_buttons %>
+          <%= f.input :drama_option, collection: Pleureuse::DRAMA, as: :radio_buttons %>
+          <%= f.input :price%>
+          <%= f.input :city%>
+          <%= f.input :description%>
+          <%= f.input :language%>
+          <%= f.input :address%>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Edit pleureuse", class: "btn-flat" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
