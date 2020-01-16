@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+  <div class="col-md-12">
+
+        <h3>Modifiez votre pleureuse:</h3>
+        <%= simple_form_for [@user, @pleureuse] do |f| %>
+          <%= f.input :name %>
+          <%= f.input :address %>
+          <%= f.input :city %>
+          <%= f.input :description %>
+          <%= f.input :gender %>
+          <%= f.input :drama_type %>
+          <%= f.input :price %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
+          <%= f.button :submit, class: "btn btn-success" %>
+          <%= link_to("Cancel", user_path(current_user), class: "btn btn-warning") %>
+        <% end %>
+    </div>
+  </div>
+</div>
