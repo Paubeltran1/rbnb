@@ -1,7 +1,9 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1522752622479-65eefd320386?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2560&q=80);">
   <div class="container">
     <h1>Meme ton oncle chiant merite d'avoir une pleureuse!</h1>
-    <p>Ayez l'enterrement que vous voulez, pas celui que vous merité</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+    <p>Ayez l'enterrement que vous voulez, pas celui que vous meritez</p>
+    <% if !current_user %>
+      <%= link_to "Sign in", new_user_session_path, class: "btn btn-flat"%>
+    <% end %>
   </div>
 </div>
