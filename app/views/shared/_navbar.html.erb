@@ -1,7 +1,10 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="d-flex align-items-center" >
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "christian-grave.png" %>
     <% end %>
+    <h3>Pleureuses en or</h3>
+  </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -14,11 +17,9 @@
         <li class="nav-item">
         <%= link_to "Devenir Pleureuse", new_pleureuse_path, class: "btn-flat"%>
         </li>
+
         <li class="nav-item">
-          <%= link_to "Home", root_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Liste de pleureses", pleureuses_path, class: "nav-link" %>
+          <%= link_to "Liste de pleureuses", pleureuses_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <% if current_user.photo? %>
