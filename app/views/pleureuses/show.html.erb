@@ -5,7 +5,7 @@
       <h2><%= @pleureuse.pseudo %></h2>
       <p><%= @pleureuse.city %> - <%= @pleureuse.description %></p>
     </div>
-    <h2 class="card-pleureuse-pricing"><%= @pleureuse.price %>$ per hour</h2>
+    <h2 class="card-pleureuse-pricing"><%= @pleureuse.price %>$ par journée</h2>
     <img src="https://ca.slack-edge.com/T02NE0241-UNEG8FN9L-82d7a499ec39-512" class="card-pleureuse-user avatar-bordered" />
   </div>
   <!-- Tab links -->
@@ -37,12 +37,12 @@
           <h2><i class="far fa-sad-cry"></i>   Se roule par terre: Oui </h2>&nbsp;
         </div>
         <div id="Booking" class="tabcontent">
-          <h2>Booking</h3>
+          <h2>Booking</h2>
         <%= simple_form_for([@pleureuse, Booking.new]) do |f| %>
           <%= f.input :start_date %>
           <%= f.input :end_date %>
           <%= f.submit %>
-          <p><%= @pleureuse.price%> par heure</p>
+          <h3><%= @pleureuse.price%> par journée</h3>
 
         <% end %>
         </div>
