@@ -1,12 +1,14 @@
 class BookingsController < ApplicationController
   def create
+
     @pleureuse = Pleureuse.find(params[:pleureuse_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
 
     @booking.pleureuse = @pleureuse
-    calculate_days
-    @booking.price = calculate_price
+    raise
+    # calculate_days
+    # @booking.price = calculate_price
     if @booking.save
       redirect_to @booking.user, notice: 'Your booking was successfully created!'
     else

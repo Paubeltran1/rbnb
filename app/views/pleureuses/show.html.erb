@@ -86,3 +86,7 @@
 <%#= if current_user ==@pleureuse.user %>
 <%= link_to "edit profile pleureuse", edit_pleureuse_path(@pleureuse)  %>
 <%#= end %>
+<%= simple_form_for([@pleureuse, Booking.new]) do |f| %>
+  <%= f.input :start_date %>
+  <%= f.submit %>
+<% end %>
