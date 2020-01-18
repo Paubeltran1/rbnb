@@ -35,7 +35,7 @@
                       required: true %>
           <%= f.input :photo, as: :file %>
 
-            <% if @user.photo? %>
+            <% if current_user.photo? %>
             <%= cl_image_tag "#{current_user.photo.key}"%>
            <% else %>
           <%= image_tag "https://image.shutterstock.com/image-vector/no-user-profile-picture-hand-260nw-99335579.jpg"%>
@@ -47,7 +47,7 @@
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Update" %>
+          <%= f.button :submit, "Update",class: "btn-flat" %>
         </div>
       <% end %>
 

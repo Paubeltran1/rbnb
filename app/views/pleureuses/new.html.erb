@@ -11,19 +11,20 @@
           <%= f.input :drama_option, collection: Pleureuse::DRAMA, as: :radio_buttons %>
           <%= f.input :price%>
           <%= f.input :city%>
+          <%= f.input :language%>
+          <%= f.input :address%>
+          <br>
           <%= f.input :description%>
+        </div>
 
           <%#= simple_fields_for :drama do |x| %>
             <%# Pleureuse::DRAMA.each do |option| %>
               <%#= x.input option.to_sym, as: :boolean %>
             <%# end %>
           <%# end %>
-          <%= f.input :language%>
-          <%= f.input :address%>
-        </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Add pleureuse" %>
+          <%= f.button :submit, "Add pleureuse", class: "btn-flat"%>
         </div>
       <% end %>
     </div>
