@@ -5,14 +5,14 @@
       <h2><%= @pleureuse.pseudo %></h2>
       <p><%= @pleureuse.city %> - <%= @pleureuse.description %></p>
     </div>
-    <h2 class="card-pleureuse-pricing"><%= @pleureuse.price %>$ par journée</h2>
+    <h2 class="card-pleureuse-pricing"><%= @pleureuse.price %>$ par jour</h2>
     <img src="https://ca.slack-edge.com/T02NE0241-UNEG8FN9L-82d7a499ec39-512" class="card-pleureuse-user avatar-bordered" />
   </div>
   <!-- Tab links -->
   <div class="tab">
     <button class="tablinks" onclick="openTab(event, 'The Profil')">The profil</button>
     <button class="tablinks" onclick="openTab(event, 'Drama Options')">Drama Options</button>
-    <button class="tablinks" onclick="openTab(event, 'Booking')">Booking</button>
+    <button class="tablinks" onclick="openTab(event, 'Booking')">Réserver</button>
   </div>
   <div class="container-fluid h-100">
     <div class="row">
@@ -37,12 +37,13 @@
           <h2><i class="far fa-sad-cry"></i>   Se roule par terre: Oui </h2>&nbsp;
         </div>
         <div id="Booking" class="tabcontent">
-          <h2>Booking</h2>
+          <h2>Réserver</h2>
         <%= simple_form_for([@pleureuse, Booking.new]) do |f| %>
           <%= f.input :start_date %>
           <%= f.input :end_date %>
-          <%= f.submit %>
-          <h3><%= @pleureuse.price%> par journée</h3>
+          <%= f.button :submit, "Réserver", class: "btn-flat"%>
+
+          <h3><%= @pleureuse.price%> € par jour</h3>
 
         <% end %>
         </div>
@@ -114,7 +115,8 @@ Next and previous buttons
   </div>
 </div>
 
-<%= @pleureuse.pseudo %>
+<!--Crear el boton para modificar pleureuse -->
+<%#= @pleureuse.pseudo %>
 <%#= if current_user ==@pleureuse.user %>
-<%= link_to "edit profile pleureuse", edit_pleureuse_path(@pleureuse)  %>
+<%#= link_to "edit profile pleureuse", edit_pleureuse_path(@pleureuse), class: "btn-flat" %>
 <%#= end %>
