@@ -37,8 +37,14 @@
           <h2><i class="far fa-sad-cry"></i>   Se roule par terre: Oui </h2>&nbsp;
         </div>
         <div id="Booking" class="tabcontent">
-          <h2>Tokyo</h3>
-          <p>Tokyo is the capital of Japan.</p>
+          <h2>Booking</h3>
+        <%= simple_form_for([@pleureuse, Booking.new]) do |f| %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <%= f.submit %>
+          <p><%= @pleureuse.price%> par heure</p>
+
+        <% end %>
         </div>
       </div>
       <div class="col-sm">
@@ -86,7 +92,3 @@
 <%#= if current_user ==@pleureuse.user %>
 <%= link_to "edit profile pleureuse", edit_pleureuse_path(@pleureuse)  %>
 <%#= end %>
-<%= simple_form_for([@pleureuse, Booking.new]) do |f| %>
-  <%= f.input :start_date %>
-  <%= f.submit %>
-<% end %>
