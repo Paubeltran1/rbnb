@@ -13,17 +13,28 @@ class PleureusesController < ApplicationController
 
   def update
     @pleureuse = Pleureuse.find(params[:id])
-    @pleureuse.update(params[:pleureuse])
+    @pleureuse.update(pleureuse_params)
+      if @pleureuse.save
+    redirect_to pleureuse_path(@pleureuse)
+    else
+    render "edit"
+    end
   end
 
   def new
-    Pleuseuse.new
+    @pleureuse = Pleureuse.new
   end
 
   def create
-    @user = User.find(params[:user_id])
-    @pleureuse = @user.pleureuses.new(pleureuse_params)
+    @pleureuse = Pleureuse.new(pleureuse_params)
+    @pleureuse.user = current_user
+    if @pleureuse.save
+    redirect_to pleureuse_path(@pleureuse)
+    else
+    render "new"
+    end
   end
+
 
   def destroy
     @pleureuse = Pleureuse.find(params[:id])
@@ -33,6 +44,6 @@ class PleureusesController < ApplicationController
   private
 
   def pleureuse_params
-    params.require(:pleureuse).permit(:pseudo, :gender, :city, :price, :description, :drama_option, :language, :adress)
+    params.require(:pleureuse).permit(:pseudo, :gender, :city, :price, :description, :drama_option, :language, :address)
   end
 end

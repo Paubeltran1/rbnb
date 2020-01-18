@@ -1,2 +1,51 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1522752622479-65eefd320386?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2560&q=80);">
+  <div class="container">
+    <h1>Ayez l'enterrement que vous voulez, pas celui que vous meritez!</h1>
+    <p>Bookez votre pleureuse maintenant</p>
+    <% if !current_user %>
+      <%= link_to "Sign in", new_user_session_path, class: "btn btn-flat"%>
+    <% end %>
+  </div>
+</div>
+
+  <div class="container">
+    <div class="d-flex justify-content-between" >
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="box">
+        <%= image_tag "funeral.svg", height: 100%>
+        <h3> Simulez votre enterrement</h3>
+        <p> Assistez à votre entrerrement simulé pour mieux ajuster votre attestament </p>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="box">
+        <%= image_tag "rocket.svg", height: 100 %>
+        <h3>Boostez votre popularité </h3>
+        <p> Soyez toujours active depuis l’au delà</p>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="box">
+        <%= image_tag "award.svg", height: 100 %>
+        <h3>Meilleur service "après mort"</h3>
+        <p>Aucun de nos clients est revenu de la mort pour se plaindre</p>
+        </div>
+      </div>
+    </div>
+      <div class="footer">
+        <div class="footer-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-copyright">
+         @ 2020 Pleureuse. All rights Reserved</i>
+      </div>
+  </div>
+
+

@@ -1,0 +1,12 @@
+<% @pleureuses.each do || %>
+<div class="col-xs-12 col-sm-4">
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= pleureuse.photo.file.nil? ? "https://images.unsplash.com/photo-1517545084371-4a575dde2a02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" : cloudinary_url(space.photo) %>);">
+    <div class="card-description">
+      <h2><%= pleureuse.pseudo  %></h2>
+      <p><%= pleureuse.city %>, <%= pleureuse.gender %>, <%= pleureuse.price %></p>
+    </div>
+    <img class="card-user" src=<%= User.find(pleureuse.user_id).photo.file.nil? ? "https://via.placeholder.com/150" : cloudinary_url(User.find(pleureuse.user_id).photo) %>>
+    <%= link_to "", pleureuse_path(pleureuse), { class: "card-link" } %>
+  </div>
+</div>
+<% end %>
