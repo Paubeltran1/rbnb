@@ -10,11 +10,13 @@
 
 <br>
 <div class="cards">
+  <% u = 0 %>
   <%@pleureuses.each do |pleureuse| %>
   <%= link_to pleureuse_path(pleureuse) do  %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @photos.sample(1).join %>)">
-    <%= pleureuse.pseudo %>
-  </div>
+    <% u += 1 %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @photos.values_at(u).join %>">
+        <%= pleureuse.pseudo %>
+      </div>
   <% end %>
 <% end %>
 </div>
