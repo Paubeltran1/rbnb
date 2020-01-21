@@ -38,7 +38,7 @@
         </div>
         <div id="Booking" class="tabcontent">
           <h2>Réserver</h2>
-        <%= simple_form_for([@pleureuse, Booking.new]) do |f| %>
+          <%= simple_form_for([@pleureuse, Booking.new]) do |f| %>
           <%= f.input :start_date %>
           <%= f.input :end_date %>
           <%= f.button :submit, "Réserver", class: "btn-flat"%>
