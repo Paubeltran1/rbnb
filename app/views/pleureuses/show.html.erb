@@ -10,8 +10,8 @@
   </div>
   <!-- Tab links -->
   <div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'The Profil')">The profil</button>
-    <button class="tablinks" onclick="openTab(event, 'Drama Options')">Drama Options</button>
+    <button class="tablinks" onclick="openTab(event, 'The Profil')">Profil</button>
+    <button class="tablinks" onclick="openTab(event, 'Drama Options')">Performances possibles</button>
     <button class="tablinks" onclick="openTab(event, 'Booking')">Réserver</button>
   </div>
   <div class="container-fluid h-100">
@@ -22,19 +22,19 @@
         <div id="The Profil" class="tabcontent">
           <h1><%= @pleureuse.pseudo %></h3>
             &nbsp;
-          <h2><i class="fas fa-location-arrow"></i>   City: </i> <%= @pleureuse.city %></h2>&nbsp;
-          <h2><i class="fas fa-transgender-alt"></i>   Gender: <%= @pleureuse.gender %></h2>&nbsp;
-          <h2><i class="fab fa-discourse"></i>   Language: <%= @pleureuse.language %></h2>&nbsp;
+          <h2><i class="fas fa-location-arrow"></i>   Ville: </i> <%= @pleureuse.city %></h2>&nbsp;
+          <h2><i class="fas fa-transgender-alt"></i>   Genre: <%= @pleureuse.gender %></h2>&nbsp;
+          <h2><i class="fab fa-discourse"></i>   Langues: <%= @pleureuse.language %></h2>&nbsp;
           <h2><i class="far fa-sad-cry"></i>   Description: <%= @pleureuse.description %></h2>&nbsp;
 
         </div>
         <div id="Drama Options" class="tabcontent">
-          <h2>Drama Options</h3>
-          <p>This are the drana types this pleureuse can act</p>
+          <h2>Performances possibles</h3>
+          <p>Voici les scénarios que vous propose votre pleureuse</p>
                 &nbsp;
-          <h2><i class="fas fa-book-dead"></i>   Maitresse: Oui </h2>&nbsp;
-          <h2><i class="far fa-angry"></i></i>   Accusation: No </h2>&nbsp;
-          <h2><i class="far fa-sad-cry"></i>   Se roule par terre: Oui </h2>&nbsp;
+          <h2><i class="fas fa-book-dead"></i>   <b>Se fait passer pour la maitresse:</b>  Oui </h2>&nbsp;
+          <h2><i class="far fa-angry"></i></i>  <b>Accuse une personne dans l'assemblée:</b>  Non </h2>&nbsp;
+          <h2><i class="far fa-sad-cry"></i> <b>Se jette au pied du cercueil:</b>   Oui </h2>&nbsp;
         </div>
         <div id="Booking" class="tabcontent">
           <h2>Réserver</h2>
