@@ -11,7 +11,5 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-/*
- *= require flatpickr
-  *= require flatpicker/dist/flatpicker
- */
+
+@import 'flatpickr';

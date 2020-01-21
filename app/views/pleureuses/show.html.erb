@@ -43,9 +43,16 @@
           <%= f.input :end_date %>
           <%= f.button :submit, "Réserver", class: "btn-flat"%>
 
+        <% end %>
+          <div class="field">
+            <%= simple_form_for([@pleureuse, Booking.new]) do |form| %>
+           <%= form.label :start_date %><br>
+          <%= form.text_field :start_date, id: 'bar' %>
+            <% end %>
+          </div>
+
           <h3><%= @pleureuse.price%> € par jour</h3>
 
-        <% end %>
         </div>
       </div>
       <div class="col-sm">
