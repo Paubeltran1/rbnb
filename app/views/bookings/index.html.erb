@@ -1,0 +1,8 @@
+<%@mybookings.each do |booking| %>
+<%=booking.pleureuse.pseudo%>
+<%=booking.start_date.strftime('%A %e %B, at %l:%M')%>
+<%=booking.end_date.strftime('%A %e %B, at %l:%M')%>
+<%= link_to "modifier réservation", edit_booking_path(booking), class: "btn-flat" %>
+<%= link_to "delete", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" }, class:"btn-del" %>
+<%end %>
+
