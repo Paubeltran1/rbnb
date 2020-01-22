@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
     @pleureuse = Pleureuse.find(params[:pleureuse_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
+    authorize @booking
 
     @booking.pleureuse = @pleureuse
 
@@ -18,6 +19,7 @@ class BookingsController < ApplicationController
   def show
     @booking = Booking.find(params[:id])
     @pleureuse = @booking.pleureuse
+    authorize @pleureuse
   end
 
 def index
