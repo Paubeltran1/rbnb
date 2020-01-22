@@ -1,5 +1,5 @@
 <div class="container">
-   <h1 class="d-flex justify-content-center">Edit my profile <%= current_user.first_name.capitalize%> <%= current_user.last_name.capitalize %> </h1>
+   <h1 class="d-flex justify-content-center">Modifier mon profile <%= current_user.first_name.capitalize%> <%= current_user.last_name.capitalize %> </h1>
   <div class="row justify-content-center">
 
     <div class ="col-sm-4 col-sm-offset-4">
@@ -14,14 +14,14 @@
           <% end %>
 
           <%= f.input :password,
-                      hint: "leave it blank if you don't want to change it",
+                      hint: "Laissez vide si vous ne voulez pas le modifier",
                       required: false,
                       input_html: { autocomplete: "new-password" } %>
           <%= f.input :password_confirmation,
                       required: false,
                       input_html: { autocomplete: "new-password" } %>
           <%= f.input :current_password,
-                      hint: "we need your current password to confirm your changes",
+                      hint: "Nous avons besoin de votre mot de passe actuel pour confirmer les changements",
                       required: true,
                       input_html: { autocomplete: "current-password" } %>
            <%= f.input :first_name,
