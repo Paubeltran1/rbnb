@@ -1,5 +1,8 @@
 class PleureusesController < ApplicationController
+skip_before_action :authenticate_user!, only: %i[index show]
+
   def index
+     @pleureuse = policy_scope(Pleureuse).all
     if params[:search].present?
       @pleureuses = Pleureuse.perform_search(params[:search])
     else
@@ -9,15 +12,19 @@ class PleureusesController < ApplicationController
   end
 
   def show
+
     @pleureuse = Pleureuse.find(params[:id])
+    authorize @pleureuse
   end
 
   def edit
     @pleureuse = Pleureuse.find(params[:id])
+    authorize @pleureuse
   end
 
   def update
     @pleureuse = Pleureuse.find(params[:id])
+    authorize @pleureuse
     @pleureuse.update(pleureuse_params)
       if @pleureuse.save
     redirect_to pleureuse_path(@pleureuse)
@@ -33,6 +40,7 @@ class PleureusesController < ApplicationController
   def create
     @pleureuse = Pleureuse.new(pleureuse_params)
     @pleureuse.user = current_user
+    authorize @pleureuse
     if @pleureuse.save
     redirect_to pleureuse_path(@pleureuse)
     else
@@ -44,6 +52,7 @@ class PleureusesController < ApplicationController
   def destroy
     @pleureuse = Pleureuse.find(params[:id])
     @pleureuse.destroy
+    authorize @pleureuse
   end
 
   private
