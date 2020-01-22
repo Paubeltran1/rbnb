@@ -28,7 +28,7 @@ User.destroy_all
 a = User.new(email:Faker::Internet.email, password:"123456",first_name:Faker::Name.first_name(), last_name:Faker::Name.last_name(),phone_number:("23212312"), birthday:"2000-01-14")
 a.save!
 
-b = Pleureuse.new(pseudo:Faker::Name.first_name(), gender:["Male","Female"].sample(1).join, city:["Nantes","Paris","Marseille","Rennes","Nancy"].sample(1).join, description:"Je peux pleurer des litres par jour",price:rand(10..100),language:(["Italian","German","French","Spanish"].sample(1).join),user_id: a.id)
+b = Pleureuse.new(pseudo:Faker::Name.first_name(), gender:["Male","Female"].sample(1).join, city:["Nantes","Paris","Marseille","Rennes","Nancy"].sample(1).join, description:Faker::GreekPhilosophers.quote,price:rand(10..100),language:(["Italian","German","French","Spanish"].sample(1).join),user_id: a.id)
 
 b.save!
 end
