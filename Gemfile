@@ -19,6 +19,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'pg_search', '~> 2.3.0'
+
 
 
 group :development do
