@@ -23,7 +23,9 @@ class BookingsController < ApplicationController
   end
 
 def index
+  @bookings = policy_scope(Booking).all
   @mybookings = current_user.bookings
+
 
 end
 
