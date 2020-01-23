@@ -1,13 +1,15 @@
-<div class="container">
+
+
+<div class="container p-4">
   <div class="row justify-content-center">
-    <div class ="col-sm-4 col-sm-offset-4" >
+    <div class ="col-sm-6 col-sm-offset-6" >
       <div class="Box">
+        <div class="shadow-sm p-3 mb-5 bg-white rounded">
 
-
-      <h2>Devenez une pleureuse hors paire</h2>
+      <h2 class="row justify-content-center">Devenez une pleureuse hors paire</h2>
 
       <%= simple_form_for @pleureuse do |f| %>
-        <div class="form-inputs">
+        <div class="form-inputs p-3">
           <%= f.input :pseudo%>
           <%= f.input :gender, collection: Pleureuse::GENDER, as: :radio_buttons %>
           <%= f.input :drama_option, collection: Pleureuse::DRAMA, as: :radio_buttons %>
@@ -17,6 +19,7 @@
           <%= f.input :address%>
           <br>
           <%= f.input :description%>
+
         </div>
 
           <%#= simple_fields_for :drama do |x| %>
@@ -30,6 +33,7 @@
         </div>
       <% end %>
       </div>
+    </div>
     </div>
   </div>
 </div>

@@ -31,21 +31,25 @@ end
 
 def edit
   @booking = Booking.find(params[:id])
+  authorize @booking
 end
 
 def update
-@booking = Booking.find(params[:id])
+  @booking = Booking.find(params[:id])
+  authorize @booking
   if @booking.update(booking_params)
   redirect_to booking_path(@booking), notice: 'Your booking was successfully modified!'
   else
     render 'edit'
-    end
+  end
 end
-  def destroy
+
+def destroy
   @booking = Booking.find(params[:id])
   @booking.destroy
+  authorize @booking
   redirect_to bookings_path
-  end
+end
 
   private
 
