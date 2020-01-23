@@ -1,8 +1,16 @@
 class BookingsController < ApplicationController
   def create
 
+
     @pleureuse = Pleureuse.find(params[:pleureuse_id])
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new
+    @booking.start_date = params[:booking][:start_date].split('to') [0]
+    if params[:booking][:start_date].split(' to ') [1].nil?
+    @booking.end_date = params[:booking][:start_date].split('to') [0]
+    else
+    @booking.end_date = params[:booking][:start_date].split(' to ') [1]
+    end
+
     @booking.user = current_user
     authorize @booking
 
