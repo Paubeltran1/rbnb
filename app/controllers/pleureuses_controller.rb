@@ -34,7 +34,9 @@ skip_before_action :authenticate_user!, only: %i[index show]
   end
 
   def new
+
     @pleureuse = Pleureuse.new
+    authorize @pleureuse
   end
 
   def create
