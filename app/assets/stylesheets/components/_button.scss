@@ -12,17 +12,35 @@
   opacity: 1;
 }
 
+.btn-ghost2 {
+  color: white;
+  border: 2px solid white;
+  padding: 8px 24px;
+  font-weight: bold;
+
+}
+
+.btn-ghost2:hover {
+  opacity: 1;
+  color: white;
+  background-color: #A00000;
+  border: 2px solid #A00000;
+
+}
+
+
 .btn-flat {
   color: white;
-  padding: 8px 24px;
+  padding: 8px 16px;
   border-radius: 4px;
-  background: #1EDD88;
+  background: #282828;
   transition: background 0.3s ease;
 }
 
 .btn-flat:hover {
-  background: #1BCB7F;
+  background: #780000;
   color: white;
+  text-decoration: none;
 }
 
 .btn-gradient {
@@ -38,4 +56,19 @@
 .btn-gradient:hover {
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
+}
+
+
+.btn-flat2 {
+  color: white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  background: #282828;
+  border: none;
+}
+
+.btn-flat2:hover {
+  background: #780000;
+  color: white;
+  text-decoration: none;
 }
