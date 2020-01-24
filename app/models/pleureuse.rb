@@ -18,6 +18,7 @@ class Pleureuse < ApplicationRecord
   validates :city, presence: true
   validates :gender, presence: true
   validates :price, presence: true
+  validates :picture, presence: true
 
   GENDER = ['Male', 'Female']
   DRAMA = ['Maitresse', 'Accusation', 'Se roule par terre']

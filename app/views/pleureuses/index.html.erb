@@ -9,7 +9,7 @@
     <%= form_tag pleureuses_path, method: :get do %>
       <%= text_field_tag :search,
         params[:search],
-        placeholder: "Find a pleureuse"
+        placeholder: "Select a City or Name"
       %>
     </div>
     <div class="col">
@@ -24,11 +24,9 @@
 <div class="container">
   <br>
   <div class="cards">
-    <% u = 0 %>
     <%@pleureuses.each do |pleureuse| %>
     <%= link_to pleureuse_path(pleureuse) do  %>
-      <% u += 1 %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @photos.values_at(u).join %>">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= pleureuse.picture %>">
           <center>
           <%= pleureuse.pseudo %>
             <br>
