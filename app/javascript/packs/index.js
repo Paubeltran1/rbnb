@@ -1,5 +1,4 @@
-import "bootstrap";
-import "../plugins/flatpickr"
+index.js
 
 // Material Select
 $('.mdb-select').materialSelect({

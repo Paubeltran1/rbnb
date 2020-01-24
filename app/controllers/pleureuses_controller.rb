@@ -60,6 +60,6 @@ skip_before_action :authenticate_user!, only: %i[index show]
   private
 
   def pleureuse_params
-    params.require(:pleureuse).permit(:pseudo, :gender, :city, :price, :description, :drama_option, :language, :address)
+    params.require(:pleureuse).permit(:pseudo, :gender, :city, :price, :description, :drama_option, :language, :address, :picture)
   end
 end
