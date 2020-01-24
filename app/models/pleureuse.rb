@@ -14,6 +14,7 @@ class Pleureuse < ApplicationRecord
   end
 
   belongs_to :user
+  has_many_attached :pictures
   validates :pseudo, presence: true
   validates :city, presence: true
   validates :gender, presence: true

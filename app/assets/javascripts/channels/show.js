@@ -27,10 +27,10 @@ document.getElementsByClassName('tablinks')[0].click()
 
 //Flatpickr - Show Pleureuse - reserver
 
-const calendar = document.querySelector('.field');
-calendar.addEventListener("click", function() {
-  const element = document.getElementById('bar');
-  flatpickr(element);
-})
+// const calendar = document.querySelector('.field');
+// calendar.addEventListener("click", function() {
+//   const element = document.getElementById('bar');
+//   flatpickr(element);
+// })
 
 
