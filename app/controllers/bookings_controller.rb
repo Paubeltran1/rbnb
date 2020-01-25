@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
 
 
     if @booking.save
-      redirect_to booking_path(@booking), notice: 'Your booking was successfully created!'
+      redirect_to booking_path(@booking), notice: 'Votre réservation à été confirmée avec succès'
     else
       render 'pleureuses/show'
     end
@@ -46,7 +46,7 @@ def update
   @booking = Booking.find(params[:id])
   authorize @booking
   if @booking.update(booking_params)
-  redirect_to booking_path(@booking), notice: 'Your booking was successfully modified!'
+  redirect_to booking_path(@booking), notice: 'Votre réservation à été confirmée avec succès'
   else
     render 'edit'
   end
