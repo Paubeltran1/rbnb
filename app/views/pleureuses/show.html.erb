@@ -6,7 +6,11 @@
       <p><%= @pleureuse.city %> - <%= @pleureuse.description %></p>
     </div>
     <h2 class="card-pleureuse-pricing"><%= @pleureuse.price %>$ par jour</h2>
-    <%= cl_image_tag @pleureuse.user.photo.key, alt: "alttext", class: "avatar-bordered card-trip-user" %>
+    <% if @pleureuse.user.photo.attached? %>
+      <%= cl_image_tag @pleureuse.user.photo.key, alt: "alttext", class: "avatar-bordered card-trip-user" %>
+    <% else %>
+      <%= image_tag ("https://pbs.twimg.com/profile_images/564429257850761216/jZ51D5Zr.jpeg"), alt: "alttext", class: "avatar-bordered card-trip-user" %>
+    <% end %>
   </div>
   <!-- Tab links -->
   <div class="tab">
@@ -61,13 +65,13 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="http://www.magali-izard.fr/wp-content/uploads/2018/10/les-pleureuses.png" height="260" width="300" alt="First slide">
+              <img class="d-block w-100" src="http://www.magali-izard.fr/wp-content/uploads/2018/10/les-pleureuses.png" height="340" alt="First slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="https://www.lassurance-obseques.fr/wp-content/uploads/2016/07/les-pleureuses.jpg" height="260" width="300" alt="Second slide">
+              <img class="d-block w-100" src="https://www.lassurance-obseques.fr/wp-content/uploads/2016/07/les-pleureuses.jpg" height="340" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="https://img.bfmtv.com/c/0/708/e06/c1ebf73ed88604bf2874645f14468.jpg" height="260" width="300" alt="Third slide">
+              <img class="d-block w-100" src="https://img.bfmtv.com/c/0/708/e06/c1ebf73ed88604bf2874645f14468.jpg" height="340" alt="Third slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
