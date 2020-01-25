@@ -33,7 +33,7 @@ class BookingsController < ApplicationController
 def index
   @bookings = policy_scope(Booking).all
   @mybookings = current_user.bookings
-  background = ["https://images.unsplash.com/photo-1505693626181-b858934dce6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80(178 kB)
+  @background = ["https://images.unsplash.com/photo-1505693626181-b858934dce6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80(178 kB)
 ","https://images.unsplash.com/photo-1505693626181-b858934dce6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80(178 kB)","https://images.unsplash.com/photo-1484619817839-dfc3452be01f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80","https://images.unsplash.com/photo-1556978255-8699ebacb579?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1048&q=80(141 kB)","https://images.unsplash.com/photo-1574808146141-fbd663cfb174?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80","https://images.unsplash.com/photo-1564434887573-4a2a234d9200?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80","https://images.unsplash.com/photo-1564887343163-92bba7c4234b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80","https://images.unsplash.com/photo-1528535619428-a995242b9096?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80","https://images.unsplash.com/photo-1549816044-47649bae10f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80","https://images.unsplash.com/photo-1506280225777-ced660ce8f16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=1050&q=80"]
 
 

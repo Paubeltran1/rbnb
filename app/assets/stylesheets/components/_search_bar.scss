@@ -1,8 +1,8 @@
 _search_bar.scss
 
-#search {
+.seachbar {
   margin: 5px;
-  border-radius: 5%;
+  border-radius: 10px;
 }
 
 
@@ -27,7 +27,7 @@ _search_bar.scss
 }
 
 .btn-outline-light {
-  height: 30px;
+  height: 36px;
   vertical-align:middle;
   padding: 0;
   width: 80px;
@@ -41,3 +41,4 @@ _search_bar.scss
 .form-inline {
   margin-left: 10px;
 }
+

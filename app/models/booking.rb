@@ -12,6 +12,6 @@ class Booking < ApplicationRecord
   end
 
   def total_price
-    return total_days * pleureuse.price
+    return (total_days + 1) * pleureuse.price
   end
 end
