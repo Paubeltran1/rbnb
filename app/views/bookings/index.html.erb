@@ -40,7 +40,10 @@
           <%= link_to "modifier", edit_booking_path(booking), class: "btn-flat" %>
           </div>
           <div class="p-3">
-          <%= link_to "delete", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" }, class: "btn-flat" %>
+            <button id="sweet-alert-demo" class="btn btn-danger">Supprimer</button>
+            <%= link_to "", booking_path(booking), method: :delete, id: "delete-link", class: "hidden" %>
+
+          <%#= link_to "delete", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" }, class: "btn-flat" %>
           </div>
           </div>
         </div>
