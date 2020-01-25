@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require "open-uri"
-
+Faker::Config.locale = :fr
 
 Booking.destroy_all
 Pleureuse.destroy_all
