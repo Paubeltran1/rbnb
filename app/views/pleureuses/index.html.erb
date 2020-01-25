@@ -8,12 +8,14 @@
       <div class="form-group col-xs-3" id="searchbar">
         <%= form_tag pleureuses_path, method: :get do %> <%= text_field_tag :search,
             params[:search],
-            placeholder: "Où est votre enterrement?"
+            placeholder: "Où est votre enterrement?",
+            class: 'border-label'
           %>
       <div class="form-group col-xs-3">
           <%= text_field_tag :drama_option,
             params[:drama_option],
-            placeholder: "Type de drame"
+            placeholder: "Type de drame",
+            class: 'border-label'
           %>
       </div>
           <%= submit_tag "Search", class: "btn btn-outline-light" %>

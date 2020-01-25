@@ -5,7 +5,7 @@
       <h2><%= @pleureuse.pseudo %></h2>
       <p><%= @pleureuse.city %> - <%= @pleureuse.description %></p>
     </div>
-    <h2 class="card-pleureuse-pricing"><%= @pleureuse.price %>$ par jour</h2>
+    <h2 class="card-pleureuse-pricing"><%= @pleureuse.price %>€ par jour</h2>
     <% if @pleureuse.user.photo.attached? %>
       <%= cl_image_tag @pleureuse.user.photo.key, alt: "alttext", class: "avatar-bordered card-trip-user" %>
     <% else %>
@@ -32,23 +32,25 @@
           <h2><i class="far fa-sad-cry"></i>   Description: <%= @pleureuse.description %></h2>&nbsp;
 
         </div>
-        <div id="Drama Options" class="tabcontent">
-          <h2>Performances possibles</h3>
+        <div id="Drama Options" class="tabcontent ">
+          <h2>Performances possibles : </h3>
           <p>Voici les scénarios que vous propose votre pleureuse</p>
                 &nbsp;
           <h2><i class="fas fa-book-dead"></i>   <b>Se fait passer pour la maitresse:</b>  Oui </h2>&nbsp;
           <h2><i class="far fa-angry"></i></i>  <b>Accuse une personne dans l'assemblée:</b>  Non </h2>&nbsp;
           <h2><i class="far fa-sad-cry"></i> <b>Se jette au pied du cercueil:</b>   Oui </h2>&nbsp;
         </div>
-        <div id="Booking" class="tabcontent">
-          <h2>Réserver</h2>
+        <div id="Booking" class="tabcontent row justify-content-center">
+          <h2 class= "m-1 row justify-content-center">Date de l'enterrement : </h2>
+          <br>
           <%= simple_form_for([@pleureuse, Booking.new]) do |f| %>
           <%= f.input :start_date, as: :hidden, input_html: {class: "datepicker", id:"range_start"} %>
           <%= f.input :end_date,as: :hidden, input_html: {class: "datepicker", id:"range_end"} %>
-          <%= f.button :submit, "Réserver", class: "btn-flat"%>
+          <br>
+          <%= f.button :submit, "Réserver", class: "btn-flat m-1 row btn-flat-3 justify-content-cente"%>
 
         <% end %>
-
+          <br>
           <h3><%= @pleureuse.price%> € par jour</h3>
 
         </div>
