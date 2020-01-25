@@ -9,11 +9,11 @@
     <%= form_tag pleureuses_path, method: :get do %>
       <%= text_field_tag :search,
         params[:search],
-        placeholder: "Select a City or Name"
+        placeholder: "Où se trouve votre enterrement ?"
       %>
     </div>
     <div class="col">
-      <%= submit_tag "Search", class: "btn-flat2"%>
+      <%= submit_tag "Rechercher", class: "btn-flat2"%>
     </div>
     <% end %>
     </div>
